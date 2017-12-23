@@ -7,8 +7,8 @@ def puzzle_choice(title, puzzle_no, puzzle_options):
 
     # Print the available puzzle options
 
-    print(title + puzzle_no)
-    print("Select one of: ")
+    print(title) 
+    print(puzzle_no)
 
     for option in puzzle_options:
         print(str(option[0]) + " " + option[1])
@@ -21,12 +21,13 @@ def puzzle_choice(title, puzzle_no, puzzle_options):
             raise
 
         # Raise an exception if no options are supplied
-    if len(avail_options) <=0:
-        raise ValueError("No options supplied")
+    if len(avail_options) <= 0:
+        return
 
 
     # Get user input
 
+    print("Select puzzle stage: ")
     number = 0
 
     while True:
